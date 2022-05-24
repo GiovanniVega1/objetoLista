@@ -7,6 +7,8 @@ void Nodo::insertarNodo() {
 	Nodo* nuevo = new Nodo();
 	cout << " Ingrese el dato del nuevo Nodo: ";
 	cin >> nuevo->dato;
+	cout << " Ingrese el nombre de la nueva tarea: ";
+	cin >> nuevo->tarea;
 
 	if (primero == NULL) {
 		primero = nuevo;
@@ -26,7 +28,7 @@ void Nodo::desplegarCola() {
 	actual = primero;
 	if (primero != NULL) {
 		while (actual != NULL) {
-			cout << endl << " " << actual->dato;
+			cout << endl << " " << actual->dato << ": " << actual->tarea;
 			actual = actual->siguiente;
 		}
 	}
