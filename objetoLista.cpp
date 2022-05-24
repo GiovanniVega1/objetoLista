@@ -1,55 +1,16 @@
 #include <iostream>
+#include "Nodo.h"
+using namespace std;
 
-using namespace::std;
-
-struct nodo {
-	int dato;
-	nodo* siguiente;
-} *primero, * ultimo;
-
-
-void insertarNodo();
-void desplegarCola();
 
 int main() {
-	insertarNodo();
-	insertarNodo();
-	insertarNodo();
-	insertarNodo();
-	insertarNodo();
+	Nodo nod;
+
+	nod.insertarNodo();
+	nod.insertarNodo();
+	nod.insertarNodo();
 	cout << endl << " La COLA " << endl;
-	desplegarCola();
+	nod.desplegarCola();
 	return 0;
 }             
 
-void insertarNodo() {
-	nodo* nuevo = new nodo();
-	cout << " Ingrese el dato del nuevo Nodo: ";
-	cin >> nuevo->dato;
-
-	if (primero == NULL) {
-		primero = nuevo;
-		primero->siguiente = NULL;
-		ultimo = primero;
-	}
-	else {
-		ultimo->siguiente = nuevo;
-		nuevo->siguiente = NULL;
-		ultimo = nuevo;
-	}
-	cout << endl << " Nodo Ingresado " << endl << endl;
-}
-
-void desplegarCola() {
-	nodo* actual = new nodo();
-	actual = primero;
-	if (primero != NULL) {
-		while (actual != NULL) {
-			cout << endl << " " << actual->dato;
-			actual = actual->siguiente;
-		}
-	}
-	else {
-		cout << endl << " La cola se encuentra Vacia " << endl << endl;
-	}
-}
