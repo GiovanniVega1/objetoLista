@@ -1,16 +1,24 @@
 #include <iostream>
 #include "Nodo.h"
+#include "Menu.h"
+
 using namespace std;
 
+class principal {
+	private:
+		Menu men;
+	public:
+		void run();
+};
 
 int main() {
-	Nodo<string, int> nod;
+	principal pri;
+	pri.run();
 
-	nod.insertarNodo();
-	nod.insertarNodo();
-	nod.insertarNodo();
-	cout << endl << " La COLA " << endl;
-	nod.desplegarCola();
 	return 0;
-}             
+}    
+
+void principal::run() {
+	men.SeleccionarAccion();
+}
 

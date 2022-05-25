@@ -1,10 +1,10 @@
 #include "Nodo.h"
 
-Nodo<string, int>* primero;
-Nodo<string, int>* ultimo;
-
-void Nodo<string, int>::insertarNodo() {
-	Nodo<string, int>* nuevo = new Nodo();
+Nodo* primero;
+Nodo* ultimo;
+ 
+void Nodo::insertarNodo() {
+	Nodo* nuevo = new Nodo();
 	cout << " Ingrese el dato del nuevo Nodo: ";
 	cin >> nuevo->dato;
 	cout << " Ingrese el nombre de la nueva tarea: ";
@@ -23,7 +23,7 @@ void Nodo<string, int>::insertarNodo() {
 	cout << endl << " Nodo Ingresado " << endl << endl;
 }
 
-void Nodo<string, int>::desplegarCola() {
+void Nodo::mostrarLista() {
 	Nodo* actual = new Nodo();
 	actual = primero;
 	if (primero != NULL) {
@@ -33,7 +33,7 @@ void Nodo<string, int>::desplegarCola() {
 		}
 	}
 	else {
-		cout << endl << " La cola se encuentra Vacia " << endl << endl;
+		cout << endl << " La lista no tiene datos " << endl << endl;
 	}
 }
 
