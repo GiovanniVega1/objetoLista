@@ -3,10 +3,11 @@
 
 using namespace::std;
 
+template<typename T, typename U>
 class Nodo {
 	private:
-		int dato;
-		string tarea;
+		U dato;
+		T tarea;
 		Nodo* siguiente;
 	public:
 		void insertarNodo();

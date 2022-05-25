@@ -4,7 +4,7 @@ using namespace std;
 
 
 int main() {
-	Nodo nod;
+	Nodo<string, int> nod;
 
 	nod.insertarNodo();
 	nod.insertarNodo();
