@@ -10,7 +10,7 @@ void Menu::SeleccionarAccion() {
 		switch (opc){
 		case 1: nod.insertarNodo(); break;
 		case 2: nod.mostrarLista(); break;
-		case 3: break;
+		case 3: nod.eliminarNodo(); break;
 		case 4: nod.marcarNodo(); break;
 		case 0: break;
 		default:cout << "Esta opcion no existe" << endl; break;

@@ -13,4 +13,5 @@ class Nodo {
 		void insertarNodo();
 		void mostrarLista();
 		void marcarNodo();
+		void eliminarNodo();
 };
